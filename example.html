@@ -75,54 +75,181 @@ To maintain unrivalled reputation for creativity and excellence and keep audienc
         </article> 
     </section> 
   
-    <!-- carousel section -->
-    <div id="carouselExampleControls" 
-        class="carousel slide" data-ride="carousel"> 
-        <div class="carousel-inner"> 
-            <div class="carousel-item active"> 
-                <img src="https://www.christianwebhost.com/blog/wp-content/uploads/2019/05/christian-wedding-ceremony-1024x681.jpeg" 
-                    class="d-block w-100" alt="MARRIAGE"> 
-            </div> 
-            <div class="carousel-item"> 
-                <img src="https://www.babycouture.in/blog/wp-content/uploads/2016/02/Birthday-Party.jpg" 
-                    class="d-block w-100" alt="birthday"> 
-            </div> 
-            <div class="carousel-item"> 
-                <img src="https://mommy-diary.com/app/uploads/2020/01/pink-winter-wonderland-babyshower_0016.jpg" 
-                    class="d-block w-100" alt="baby-shower"> 
-            </div> 
-		<div class="carousel-item"> 
-                <img src="https://cdn.augrav.com/online/jewels/2018/05/18133355/Wallpapers-1600x900.jpg" 
-                    class="d-block w-100" alt="engagement"> 
-            </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-		<div class="carousel-item"> 
-                <img src="http://1.bp.blogspot.com/-Sz-v5OMB19U/TvgoJGAqS5I/AAAAAAAAFz0/_IKmrtV4vic/s1600/new-york-christmas-tree.jpg" 
-                    class="d-block w-100" alt="christams"> 
-            </div>
-            <div class="carousel-item"> 
-                <img src="https://media.timeout.com/images/105347841/1372/772/image.jpg" 
-                    class="d-block w-100" alt="christams"> 
-            </div>
-		
-        </div> 
-        <a class="carousel-control-prev" 
-            href="#carouselExampleControls" 
-            role="button" data-slide="prev"> 
-            <span class="carousel-control-prev-icon" 
-                aria-hidden="true"> 
-            </span> 
-            <span class="sr-only">Previous</span> 
-        </a> 
-        <a class="carousel-control-next" 
-            href="#carouselExampleControls" 
-            role="button" data-slide="next"> 
-            <span class="carousel-control-next-icon" 
-                aria-hidden="true"> 
-            </span> 
-            <span class="sr-only">Next</span> 
-        </a> 
-    </div> 
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1300px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<hr>
+
+<h2 style=font-family:lucida-handwriting>PORTFOLIO</h2>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="https://i0.wp.com/www.immacevents.com/wp-content/uploads/2019/12/x_QpuEwY.jpeg?fit=2048%2C1367&ssl=1" style="width:100%">
+	<p style=font-family:lucida-handwriting>Birthday Parties</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="http://www.lovelytelugu.com/wp-content/uploads/2016/07/ashwin-kireet.jpg"  style="width:100%">
+	<p style=font-family:lucida-handwriting>Marriage Events</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://www.christianwebhost.com/blog/wp-content/uploads/2019/05/christian-wedding-ceremony-1024x681.jpeg"  style="width:100%">
+	<p style=font-family:lucida-handwriting>Engagement Ceremonies</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="https://media.karaspartyideas.com/media/uploads/2013/12/boy-20.jpg" style="width:100%">
+	<p style=font-family:lucida-handwriting>Baby Showers</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://newyearsevepartyplaces.com/wp-content/uploads/2018/07/Providence-New-Years-Eve-Fireworks.jpg" style="width:100%">
+	<p style=font-family:lucida-handwriting>New Year Parties</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="http://www.digitalmusicnews.com/wp-content/uploads/2018/03/audience_concert.jpg" style="width:100%">
+	<p style=font-family:lucida-handwriting>Concerts</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
   
     <div class="container"> 
         <div class="row-flex"> 
@@ -174,31 +301,6 @@ To maintain unrivalled reputation for creativity and excellence and keep audienc
             </div> 
         </div> 
     </div> 
-  
-  
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity= 
-"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"> 
-    </script> 
-      
-    <script src= 
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity= 
-"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"> 
-    </script> 
-      
-    <script src= 
-"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity= 
-"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"> 
-    </script> 
 </body> 
   
 </html> 
