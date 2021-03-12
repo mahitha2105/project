@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,  
             initial-scale=1, shrink-to-fit=no"> 
   
-    <link rel="stylesheet" href="example.css"> 
+    <link rel="stylesheet" href="ex.css"> 
   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href= 
@@ -75,42 +75,17 @@ To maintain unrivalled reputation for creativity and excellence and keep audienc
         </article> 
     </section> 
   
-   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
-    <script type="text/javascript">
-        var app = angular.module('MyApp', [])
-        app.controller('MyController', function ($scope, $interval) {
-            $scope.Customer = null;
-            $scope.Customers = [
-                    { CustomerId: 1, Name: "birthday", Photo: "https://i0.wp.com/www.immacevents.com/wp-content/uploads/2019/12/x_QpuEwY.jpeg?fit=2048%2C1367&ssl=1" },
-                    { CustomerId: 2, Name: "marriage", Photo: "Photos-event2.jpg" },
-                    { CustomerId: 3, Name: "enagement", Photo: "Photos-event3.jpg" },
-                   
-                   ];
- 
-            //Index is initialized to 0.
-            var index = 0;
- 
-            //The Interval function.
-            $interval(function () {
-                //The Customer object is fetched and assigned to variable.
-                $scope.Customer = $scope.Customers[index];
-                $scope.$apply();
- 
-                //Index is incremented.
-                index++;
- 
-                //Index is again set to 0 if it exceeds the Array length.
-                if (index > $scope.Customers.length - 1) {
-                    index = 0
-                }
-            }, 5000);
-        });
-    </script>
-    <div ng-app="MyApp" ng-controller="MyController">
-        <img ng-src="{{Customer.Photo}}" style="height: 600px; width: 1500px" />
-        <br />
-        <span>{{Customer.Name}}</span>
-    </div>
+  <div class="row">
+  <div class="column">
+    <img src="https://i0.wp.com/www.immacevents.com/wp-content/uploads/2019/12/x_QpuEwY.jpeg?fit=2048%2C1367&ssl=1" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://i0.wp.com/www.immacevents.com/wp-content/uploads/2019/12/x_QpuEwY.jpeg?fit=2048%2C1367&ssl=1" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://i0.wp.com/www.immacevents.com/wp-content/uploads/2019/12/x_QpuEwY.jpeg?fit=2048%2C1367&ssl=1" alt="Mountains" style="width:100%">
+  </div>
+</div>
   
     <div class="container"> 
         <div class="row-flex"> 
