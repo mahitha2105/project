@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width,  
+            initial-scale=1, shrink-to-fit=no"> 
+  
+    <link rel="stylesheet" href="example.css"> 
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity= 
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"> 
+  
+    <title>Restaurant Website</title> 
+</head> 
+  
+<body> 
+  
+    <!-- navbar  -->
+    <nav> 
+        <ul class="nav-flex-row"> 
+            <li class="nav-item"> 
+                <a href="#aboutus">About Us</a> 
+            </li> 
+            <li class="nav-item"> 
+                <a href="#Contact">Contact Us</a> 
+            </li>
+	    <li class="nav-item"> 
+                <a href="#Feedback">Feed Back</a> 
+            </li> 
+	   <li class="nav-item"> 
+                <a href="#Gallery">Gallery</a> 
+            </li> 
+		<li class="nav-item"> 
+                <a href="#Admin page">Admin Page</a> 
+            </li> 
+	    <li class="nav-item"> 
+                <a href="#careers">Careers</a> 
+		<li class="nav-item"> 
+                <a href="#Adminlogin">Admin Login</a> 
+            </li> 
+            </li> 	 
+        </ul> 
+    </nav> 
+    <section class="section-intro"> 
+        <header> 
+	 <h1> ONE STOP ""EVENT PLANNER" </h1>
+		
+        </header> 
+	<h3 style="color:yellow;opacity:0.4;"> every event should be perfect </h3>
+        
+    </section> 
+  
+    <section class="about-section"> 
+        <article> 
+            <h3> 
+                <section class="about-section"> 
+        <article> 
+            <h4 style=font-style:copperplate;> <br> <br> OUR VISION  :  To make the our brand synonymous with excellence, flawless execution and inimitable service. 
+To leverage our established market presence and relationships in the eventmanagement industry to become Asia's leading Eventmanagement Company<br><br><br>
+            OUR MISSION : To provide superior entertainment value and exceptional experiences to customers worldwide. 
+To maintain unrivalled reputation for creativity and excellence and keep audiences clued-in, captivated and connected.<br><br><br><br></h4><br>
+
+<p style=text-align:center;> HELLO....GLAD YOU ARE HERE...<p>
+<p style=text-align:center;>WE AS AN EVENT MANAGEMENT COMPANY ARE TRYING OUR LEVEL BEST TO ORGANISE EVENTS AT ITS BEST,JOIN US AND MAKE OUR JOUNEY A BLOOMING SUCCESS<p><BR>
+<p style=text-align:center;>THESE ARE SOME OF THE SERVICES WE PROVIDE<p>
+
+        </article> 
+    </section> 
+  
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('MyApp', [])
+        app.controller('MyController', function ($scope, $interval) {
+            $scope.Customer = null;
+            $scope.Customers = [
+                    { CustomerId: 1, Name: "birthday", Photo: "https://i0.wp.com/www.immacevents.com/wp-content/uploads/2019/12/x_QpuEwY.jpeg?fit=2048%2C1367&ssl=1" },
+                    { CustomerId: 2, Name: "marriage", Photo: "Photos-event2.jpg" },
+                    { CustomerId: 3, Name: "enagement", Photo: "Photos-event3.jpg" },
+                   
+                   ];
+ 
+            //Index is initialized to 0.
+            var index = 0;
+ 
+            //The Interval function.
+            $interval(function () {
+                //The Customer object is fetched and assigned to variable.
+                $scope.Customer = $scope.Customers[index];
+                $scope.$apply();
+ 
+                //Index is incremented.
+                index++;
+ 
+                //Index is again set to 0 if it exceeds the Array length.
+                if (index > $scope.Customers.length - 1) {
+                    index = 0
+                }
+            }, 5000);
+        });
+    </script>
+    <div ng-app="MyApp" ng-controller="MyController">
+        <img ng-src="{{Customer.Photo}}" style="height: 600px; width: 1500px" />
+        <br />
+        <span>{{Customer.Name}}</span>
+    </div>
+  
+    <div class="container"> 
+        <div class="row-flex"> 
+            <div class="flex-column-form"> 
+                <h2> 
+                    Make a booking 
+                </h2> 
+                <form class="media-centered"> 
+                    <div class="form-group"> 
+                        <p style=font-style:cursive;opacity:0.9;font-size:0.8em> 
+                            Please leave your number we will  
+                            call to make a reservation 
+                        </p> 
+                          
+                        <input type="name" class="form-control" 
+                            id="exampleInputName1" 
+                            aria-describedby="nameHelp"
+                            placeholder="Enter your name"> 
+                    </div> 
+                    <div class="form-group"> 
+                        <input type="number" class="form-control" 
+                            id="exampleInputphoneNumber1"
+                            placeholder="Enter your phone number"> 
+                    </div> 
+                    <button type="submit" class="btn btn-primary"> 
+                        Submit 
+                    </button> 
+                </form> 
+            </div> 
+            <div class="opening-time"> 
+                <h2> 
+                    Opening times 
+                </h2> 
+                <p style=font-style:cursive;opacity:0.9;font-size:0.8em> 
+                    <span>Monday-Thursday:08:00-22:00</span> 
+                    <span>Friday-Saturday:09:00-23:00</span> 
+                    <span>Sunday:10:00-17:00</span> 
+                </p> 
+            </div> 
+            <div class="contact-adress"> 
+                <h2> 
+                    Contact 
+                </h2> 
+                <p style=font-style:cursive;opacity:0.9;font-size:0.8em>  
+                    <span>4th Block</span> 
+                    <span>JAYA NAGAR</span> 
+                    <span>BENGALURU</span> 
+                </p> 
+            </div> 
+        </div> 
+    </div> 
+</body> 
+  
+</html> 
